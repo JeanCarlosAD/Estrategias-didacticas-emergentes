@@ -9,17 +9,75 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        :root {
-            --bg-dark: #020617;
-            --accent-cyan: #22d3ee;
-            --accent-blue: #3b82f6;
-            --accent-purple: #a855f7;
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
-            --glass: rgba(15, 23, 42, 0.85);
-            --border: rgba(255, 255, 255, 0.1);
-        }
+        <!-- SOLO TE MUESTRO LO NUEVO PARA NO DAÑAR NADA -->
 
+<style>
+
+/* ANIMACIÓN DE ENTRADA GENERAL */
+.slide {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.slide.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* MEJORA TARJETAS */
+.info-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: var(--accent-cyan);
+    transition: 0.4s;
+}
+
+.info-card:hover::after {
+    width: 100%;
+}
+
+/* BOTONES PRO */
+.btn-pro {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--accent-cyan);
+    color: var(--accent-cyan);
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-pro:hover {
+    background: var(--accent-cyan);
+    color: var(--bg-dark);
+    box-shadow: 0 0 15px var(--accent-cyan);
+    transform: scale(1.05);
+}
+
+/* EFECTO EN IMÁGENES */
+.image-container img {
+    transition: transform 0.5s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.08);
+}
+
+</style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body {
